@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #0f6cd6;
+}
+
+form {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: width 0.4s ease;
+    overflow: hidden;
+}
+form.active {
+    width: 400px;
+}
+
+form input {
+    display: inline-block;
+    width: 320px;
+    height: 100%;
+    border-radius: 40px;
+    padding: 0 25px;
+    background-color: inherit;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+form .search-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+}
+
+form .search-icon::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+
+form .search-icon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: #000;
+    transform: translate(8px, 8px) rotate(-45deg);
+}
+
+form .close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+form .close-icon::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 18px;
+    background-color: #000;
+    transform: rotate(45deg);
+}
+
+form .close-icon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 18px;
+    background-color: #000;
+    transform: rotate(315deg);
+}
